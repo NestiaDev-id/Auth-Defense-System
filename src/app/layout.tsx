@@ -5,7 +5,7 @@ import { auth } from "@/auth";
 import "./globals.css";
 import { Toaster } from "@/src/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Auth Defense System",

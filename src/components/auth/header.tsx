@@ -5,6 +5,7 @@ import { cn } from "@/src/lib/utils";
 const font = Poppins({
   subsets: ["latin"],
   weight: ["600"],
+  display: "swap",
 });
 
 interface HeaderProps {
