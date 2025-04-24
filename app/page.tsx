@@ -1,33 +1,35 @@
-import { Button } from "@/components/ui/button";
 import { Poppins } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { LoginButton } from "../components/ui/auth/login-button";
 
-const poppins = Poppins({
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { LoginButton } from "@/components/auth/login-button";
+
+const font = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+  weight: ["600"]
+})
+
 export default function Home() {
   return (
-    <div className="flex h-full flex-col items-center justify-center bg-gradient-to-tr from-primary to-secondary">
-      <div className="space-y-6">
-        <h1
-          className={cn(
-            "text-6xl font-semibold text-white drop-shadow-md",
-            poppins.className
-          )}
-        >
-          🔒 Auth
+    <main className="flex h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+      <div className="space-y-6 text-center">
+        <h1 className={cn(
+          "text-6xl font-semibold text-white drop-shadow-md",
+          font.className,
+        )}>
+          🔐 Auth
         </h1>
-        <p className="text-white text-lg ">A simple authentication app</p>
-        <div className="text-center">
-          <LoginButton>
-            <Button size={"lg"} variant={"secondary"}>
+        <p className="text-white text-lg">
+          A simple authentication service
+        </p>
+        <div>
+          <LoginButton  asChild>
+            <Button variant="secondary" size="lg">
               Sign in
             </Button>
           </LoginButton>
         </div>
       </div>
-    </div>
-  );
+    </main>
+  )
 }
